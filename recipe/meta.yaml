@@ -1,12 +1,11 @@
-{% set name = "dmlc" %}
 {% set version = "0.5" %}
 
 package:
-  name: {{ name|lower }}
+  name: dmlc
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}-core/archive/v{{ version }}.tar.gz
+  url: https://github.com/dmlc/dmlc-core/archive/v{{ version }}.tar.gz
   sha256: cd97475ae1ecf561a1cb1129552f9889d52b11b3beb4c56e5345d007d5020ece
 
 build:
@@ -17,9 +16,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake >=3.14
+    - ninja-base
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
-    - ninja
 
 test:
   commands:
