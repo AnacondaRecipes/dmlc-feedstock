@@ -18,7 +18,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake >=3.14
     - llvm-openmp  # [osx]
-    - libgomp  # [linux]
+    - libgomp      # [linux]
     - ninja
 
 test:
@@ -32,7 +32,7 @@ about:
   license_file: LICENSE
   summary: Distributed Machine Learning Common Codebase
   description: |
-    DMLC-Core is the backbone library to support all DMLC projects, offers the bricks to 
+    DMLC-Core is the backbone library to support all DMLC projects, offers the bricks to
     build efficient and scalable distributed machine learning libraries.
   doc_url: https://dmlc-core.readthedocs.io/en/latest/
   dev_url: https://github.com/dmlc/dmlc-core
